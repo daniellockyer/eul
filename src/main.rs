@@ -11,7 +11,7 @@ const PRECISION: u64 = 14;
 
 fn beta(ez: f64) -> f64 {
     let zl = (ez + 1.0).ln();
-    -0.370393911 * ez
+    -0.370393914 * ez
         + 0.070471823 * zl
         + 0.17393686 * zl.powi(2)
         + 0.16339839 * zl.powi(3)
