@@ -1,0 +1,11 @@
+sudo: false
+language: rust
+cache: cargo
+rust:
+  - stable
+  - beta
+  - nightly
+script: ./ci.sh
+notifications:
+  email:
+    on_success: never
