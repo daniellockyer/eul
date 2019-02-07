@@ -1,7 +1,7 @@
 extern crate metrohash;
 
-use std::u64;
 use std::hash::Hasher;
+use std::u64;
 
 const NUM_REGISTERS: usize = 16384;
 const ALPHA: f64 = (0.7213 / (1.0 + 1.079 / 16384.0));
@@ -11,10 +11,7 @@ const PRECISION: u64 = 14;
 
 fn beta(ez: f64) -> f64 {
     let zl = (ez + 1.0).ln();
-    -0.370393914 * ez
-        + 0.070471823 * zl
-        + 0.17393686 * zl.powi(2)
-        + 0.16339839 * zl.powi(3)
+    -0.370393914 * ez + 0.070471823 * zl + 0.17393686 * zl.powi(2) + 0.16339839 * zl.powi(3)
         - 0.09237745 * zl.powi(4)
         + 0.03738027 * zl.powi(5)
         - 0.005384159 * zl.powi(6)
