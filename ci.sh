@@ -6,6 +6,8 @@ shopt -s nullglob
 cargo build --release
 cargo test
 
+cargo install hyperfine
+
 for fn in data/*; do
     EXACT_COUNT=`gunzip -c $fn | tr ' ' '\n' | sort -u | wc -l`
     CARD_EST=`gunzip -c $fn | ./target/release/eul`
